@@ -1,0 +1,200 @@
+{
+  "cities": [
+    {
+      "name_arabic": "الدار البيضاء",
+      "population": 3165000,
+      "src": "casa.jpg",
+      "cafes": [
+        {
+          "name": "مقهى الأصالة",
+          "categories": ["مقهى", "مأكولات خفيفة"],
+          "customer_rating": 8.5,
+          "location": "وسط المدينة"
+        },
+        {
+          "name": "مقهى الرياض",
+          "categories": ["مقهى", "مطعم"],
+          "customer_rating": 4.0,
+          "location": "شارع محمد الخامس"
+        }
+      ]
+    },
+    {
+      "name_arabic": "الرباط",
+      "population": 1850000,
+      "src": "rabat.jpg",
+      "cafes": []
+    },
+    {
+      "name_arabic": "فاس",
+      "population": 1328000,
+      "src": "fes.jpg",
+      "cafes": [
+        {
+          "name": "مقهى الفرح",
+          "categories": ["مقهى", "حلويات"],
+          "customer_rating": 4.3,
+          "location": "باب بوجلود"
+        },
+        {
+          "name": "مقهى لومباردو",
+          "categories": ["مقهى", "مأكولات خفيفة"],
+          "customer_rating": 4.1,
+          "location": "شارع القصبة"
+        }
+      ]
+    },
+    {
+      "name_arabic": "طنجة",
+      "population": 1150000,
+      "src": "tangier.jpg",
+      "cafes": [
+        {
+          "name": "كافيتيريا طنجة",
+          "categories": ["كافتيريا", "مقهى"],
+          "customer_rating": 4.0,
+          "location": "وسط المدينة"
+        },
+        {
+          "name": "مقهى الأسرة",
+          "categories": ["مقهى", "مأكولات خفيفة"],
+          "customer_rating": 4.5,
+          "location": "شارع الكورنيش"
+        }
+      ]
+    },
+    {
+      "name_arabic": "مراكش",
+      "population": 1066000,
+      "src": "marrakech.jpg",
+      "cafes": [
+        {
+          "name": "مقهى الشرفة",
+          "categories": ["مقهى", "تراثي"],
+          "customer_rating": 4.8,
+          "location": "ساحة جامع الفنا"
+        },
+        {
+          "name": "مقهى بلوم",
+          "categories": ["مقهى", "عصائر"],
+          "customer_rating": 4.6,
+          "location": "شارع محمد الخامس"
+        }
+      ]
+    },
+    {
+      "name_arabic": "سلا",
+      "population": 1061000,
+      "src": "sale.jpg",
+      "cafes": [
+        {
+          "name": "مقهى المدينة",
+          "categories": ["مقهى", "مطعم"],
+          "customer_rating": 4.3,
+          "location": "ساحة الجديدة"
+        },
+        {
+          "name": "مقهى الفرح",
+          "categories": ["مقهى", "حلويات"],
+          "customer_rating": 4.0,
+          "location": "شارع الأميرات"
+        }
+      ]
+    },
+    {
+      "name_arabic": "أكادير",
+      "population": 955000,
+      "src": "agadir.jpg",
+      "cafes": [
+        {
+          "name": "كافيتيريا أكادير",
+          "categories": ["كافتيريا", "مقهى"],
+          "customer_rating": 4.2,
+          "location": "وسط المدينة"
+        },
+        {
+          "name": "مقهى السعادة",
+          "categories": ["مقهى", "مأكولات خفيفة"],
+          "customer_rating": 4.4,
+          "location": "شارع محمد الخامس"
+        }
+      ]
+    },
+    {
+      "name_arabic": "مكناس",
+      "population": 769000,
+      "src": "meknes.jpg",
+      "cafes": [
+        {
+          "name": "مقهى النخيل",
+          "categories": ["مقهى", "مطعم"],
+          "customer_rating": 4.6,
+          "location": "شارع الحسن الثاني"
+        },
+        {
+          "name": "مقهى السلام",
+          "categories": ["مقهى", "عصائر"],
+          "customer_rating": 4.1,
+          "location": "حي الحدائق"
+        }
+      ]
+    },
+    {
+      "name_arabic": "الجديدة",
+      "population": 627000,
+      "src": "jdida.jpg",
+      "cafes": [
+        {
+          "name": "كافيتيريا الجديدة",
+          "categories": ["كافتيريا", "مقهى"],
+          "customer_rating": 4.0,
+          "location": "المدينة الجديدة"
+        },
+        {
+          "name": "مقهى الأمل",
+          "categories": ["مقهى", "مأكولات خفيفة"],
+          "customer_rating": 4.3,
+          "location": "شارع الحسن الثاني"
+        }
+      ]
+    },
+    {
+      "name_arabic": "خريبكة",
+      "population": 613000,
+      "src": "khribka.jpg",
+      "cafes": [
+        {
+          "name": "مقهى السلام",
+          "categories": ["مقهى", "حلويات"],
+          "customer_rating": 4.2,
+          "location": "وسط المدينة"
+        },
+        {
+          "name": "مقهى الفرح",
+          "categories": ["مقهى", "مأكولات خفيفة"],
+          "customer_rating": 4.5,
+          "location": "شارع الشهداء"
+        }
+      ]
+    },
+    {
+      "name_arabic": "القنيطرة",
+      "population": 572000,
+      "src": "kenitra.jpg",
+      "cafes": [
+        {
+          "name": "كافيتيريا القنيطرة",
+          "categories": ["كافتيريا", "مقهى"],
+          "customer_rating": 4.1,
+          "location": "وسط المدينة"
+        },
+        {
+          "name": "مقهى النجاح",
+          "categories": ["مقهى", "مأكولات خفيفة"],
+          "customer_rating": 4.3,
+          "location": "شارع محمد الخامس"
+        }
+      ]
+    }
+  ]
+}

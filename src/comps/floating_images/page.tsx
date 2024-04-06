@@ -23,7 +23,7 @@ export default function Floating_Images() {
   const easing = 0.08;
   const speed = 0.01;
 
-  const manageMouseMove = (e) => {
+  const manageMouseMove = (e: any) => {
     const { movementX, movementY } = e;
     xForce += movementX * speed;
     yForce += movementY * speed;
@@ -55,7 +55,9 @@ export default function Floating_Images() {
     if (xForce != 0 || yForce != 0) {
       requestAnimationFrame(animate);
     } else {
-      cancelAnimationFrame(requestAnimationFrameId);
+      cancelAnimationFrame(
+        requestAnimationFrameId ? requestAnimationFrameId : 0
+      );
       requestAnimationFrameId = null;
     }
   };
