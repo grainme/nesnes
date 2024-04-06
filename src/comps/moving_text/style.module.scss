@@ -1,0 +1,25 @@
+.landing {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.textContainer {
+  overflow: hidden;
+}
+
+.slider {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.slider p {
+  display: inline-block;
+  margin: 0;
+  color: #e2e2e2be;
+  font-size: 180px;
+  font-weight: 500;
+  padding-right: 50px;
+}

@@ -1,0 +1,39 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@500&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@500,300,600,400,700&display=swap");
+
+@font-face {
+  font-family: "Bxig";
+  src: url("/public/fonts/BIGX.otf");
+}
+
+@font-face {
+  font-family: "KawkabMono";
+  src: url(/public/fonts/KawkabMono-Regular.otf);
+}
+
+@font-face {
+  font-family: "Latee";
+  src: url("/public/fonts/LateefFont-Regular.otf");
+}
+
+@font-face {
+  font-family: "Cooper";
+  src: url("/public/fonts/CooperArabic.ttf");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
