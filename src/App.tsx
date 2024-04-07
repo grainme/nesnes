@@ -9,7 +9,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="flex flex-col gap-[2rem] bg-[#010101] text-[#f6f4ee] min-h-[100vh] overflow-hidden">
+            <div className="bg-[#010101] text-[#f6f4ee] min-h-[100vh] overflow-hidden">
               <Header />
             </div>
           }
@@ -17,7 +17,7 @@ function App() {
         <Route
           path="/cities"
           element={
-            <div className="flex flex-col gap-[2rem] bg-[#010101] text-[#f6f4ee] min-h-[100vh] overflow-hidden">
+            <div className="bg-[#010101] text-[#f6f4ee] min-h-[100vh] overflow-hidden">
               <Cities />
             </div>
           }

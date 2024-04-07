@@ -69,30 +69,31 @@ export default function Floating_Images() {
       }}
       className={styles.main}
     >
-      <div ref={plane1} className={styles.plane}>
-        <img src={floating1} alt="img" width={300} />
-        <img src={floating2} alt="img" width={300} />
-        <img src={floating7} alt="img" width={225} />
-      </div>
-      <div ref={plane2} className={styles.plane}>
-        <img src={floating4} alt="img" width={250} />
-        <img src={floating6} alt="img" width={200} />
-        <img src={floating8} alt="img" width={225} />
-      </div>
-      <div ref={plane3} className={styles.plane}>
-        <img src={floating3} alt="img" width={150} />
-        <img src={floating5} alt="img" width={200} />
+      <div className="hidden md:flex">
+        <div ref={plane1} className={styles.plane}>
+          <img src={floating1} alt="img" width={300} />
+          <img src={floating2} alt="img" width={300} />
+          <img src={floating7} alt="img" width={225} />
+        </div>
+        <div ref={plane2} className={styles.plane}>
+          <img src={floating4} alt="img" width={250} />
+          <img src={floating6} alt="img" width={200} />
+          <img src={floating8} alt="img" width={225} />
+        </div>
+        <div ref={plane3} className={styles.plane}>
+          <img src={floating3} alt="img" width={150} />
+          <img src={floating5} alt="img" width={200} />
+        </div>
       </div>
       <div className={styles.title}>
         <h1>
           نتا ماشي فمدينة ديلك وباغي تمشي{" "}
           <span className="text-[#e5af32]">قهوة</span> بش تخدم
         </h1>
-        <p>
-          نصنص هو تطبيق يهدف إلى توفير قائمة بالمقاهي المناسبة للعمل على
-          اللابتوب في المغرب, يتيح للمستخدمين العثور على المقاهي التي توفر بيئة
+        <div className="text-center font-ibm opacity-40 text-[13px] md:text-[18px] mt-5">
+          نصنص هو تطبيق يتيح للمستخدمين العثور على المقاهي التي توفر بيئة
           مريحة ومناسبة للعمل والدراسة .
-        </p>
+        </div>
       </div>
     </main>
   );

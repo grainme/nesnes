@@ -15,7 +15,7 @@ export default function index({ project }: any) {
       }}
       className={styles.project}
     >
-      <p className="font-cooper text-[70px] text-[#c4c2c2] hover:text-black">
+      <p className="font-cooper md:text-[70px] text-[20px] mt-3 text-[#c4c2c2] hover:text-black">
         {project.title1}
       </p>
     </div>

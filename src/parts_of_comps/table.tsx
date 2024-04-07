@@ -64,7 +64,7 @@ function CityCafesTable({ city }: Props) {
   return (
     <Card className="font-ibm" dir="rtl">
       <CardHeader className="flex flex-col justify-center items-center">
-        <CardTitle className="text-[70px]">{city}</CardTitle>
+        <CardTitle className="md:text-[70px] text-[50px]">{city}</CardTitle>
         <CardDescription>
           هادو هوما المقاهي لي موافقين مدينة {city}
         </CardDescription>
@@ -99,7 +99,7 @@ function CityCafesTable({ city }: Props) {
                       {cafe.name}
                     </td>
                     <td className="p-4 max-w-[5rem] border border-gray-300">
-                      <div className="flex gap-2 items-center justify-center">
+                      <div className="flex md:flex-row flex-col gap-2 items-center justify-center">
                         {cafe.categories.map((category: string, i: number) => {
                           const randomColorIndex = Math.floor(
                             Math.random() * categoryColors.length

@@ -98,8 +98,8 @@ export default function Line() {
   };
 
   return (
-    <div className="flex flex-col w-full justify-center items-center">
-      <div className="relative w-full h-px mb-5">
+    <div className="flex flex-col justify-center items-center">
+      <div className="relative w-full h-px mb-5 hidden md:flex">
         <div
           onMouseEnter={() => {
             manageMouseEnter();
@@ -119,15 +119,15 @@ export default function Line() {
           ></path>
         </svg>
       </div>
-      <div className="flex flex-col items-center">
-        <div className="flex justify-end">
-          <p className="text-[22px] w-[49rem] ml-8 font-ibm text-center">
+      <div className="flex flex-col w-[100vw] justify-center items-center px-9">
+        <div className="flex md:justify-end">
+          <div className="md:text-[22px] text-[13px] md:w-[49rem] w-full md:ml-8 font-ibm text-center">
             تقدر تساهم في التطبيق، إلا كنتي كتجلس فشي مقهى ولا كتعرف شي مقاهي
             لخصنا ندخلهوم إلى القائمة تقدر دخل المعلومات في صندوق لتحت!
-          </p>
+          </div>
         </div>
-        <div className="flex mt-12">
-          <div className="flex w-full ml-8 flex-wrap gap-2.5">
+        <div className="flex md:mt-12 my-5">
+          <div className="flex w-full md:ml-8 flex-wrap gap-2.5 justify-center">
             <p className="flex justify-center items-center border border-white min-w-[6rem] rounded-2xl text-lg py-2.5 px-3 ">
               تكنولوجيا
             </p>

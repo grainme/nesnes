@@ -18,15 +18,6 @@
       font-size: 30px;
       text-align: center;
     }
-    p {
-      color: #f6f4ee9b;
-      margin: 0px;
-      font-size: 14px;
-      text-align: center;
-      margin-top: 10px;
-      padding-left: 10rem;
-      padding-right: 10rem;
-    }
   }
   .plane {
     width: 100%;
@@ -82,5 +73,17 @@
         }
       }
     }
+  }
+}
+
+/* Set height to 50vh for screens smaller than 600px (adjust as needed) */
+@media screen and (max-width: 600px) {
+  .main {
+    height: 40vh;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
   }
 }
