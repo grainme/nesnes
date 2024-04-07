@@ -5,8 +5,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ReactElement, ReactNode, ReactPortal } from "react";
-import citiesData from "../../public/database/cities.json";
+import {
+  ReactElement,
+  ReactNode,
+  ReactPortal,
+  useEffect,
+  useState,
+} from "react";
+import { createClient } from "@supabase/supabase-js";
 
 interface Cafe {
   name: string;
@@ -28,11 +34,46 @@ interface Props {
 }
 
 function CityCafesTable({ city }: Props) {
-  const cities = citiesData.cities;
+  const supabase = createClient(
+    import.meta.env.VITE_SUPABASE_URL,
+    import.meta.env.VITE_SUPABASE_ANON_KEY
+  );
+
+  const [cities, setCities] = useState<any[]>([]);
+  const [Cafes, setCafes] = useState<any[]>([]);
+
+  useEffect(() => {
+    getCities();
+    getCafes();
+  }, []);
+
+  async function getCities() {
+    const { data, error } = await supabase.from("cities").select();
+    if (error) {
+      console.error("Error fetching cities:", error.message);
+    } else {
+      setCities(data);
+    }
+  }
+  async function getCafes() {
+    const { data, error } = await supabase.from("cafes").select();
+    if (error) {
+      console.error("Error fetching cafes:", error.message);
+    } else {
+      setCafes(data);
+    }
+  }
   const selectedCity = cities.find((item) => item.name_arabic === city);
 
   if (!selectedCity) {
     return <div>City not found</div>;
+  }
+
+  let selectedCafes = [];
+  if (Cafes) {
+    selectedCafes = Cafes.filter(
+      (item) => item.city_id === selectedCity.city_id
+    );
   }
 
   function getRatingColorClass(rating: number): string {
@@ -59,7 +100,6 @@ function CityCafesTable({ city }: Props) {
     "text-blue-800",
     "text-purple-800",
   ];
-  const { cafes } = selectedCity;
 
   return (
     <Card className="font-ibm" dir="rtl">
@@ -71,7 +111,7 @@ function CityCafesTable({ city }: Props) {
       </CardHeader>
       <CardContent>
         <table className="w-full table-auto border-collapse border border-gray-300">
-          {cafes.length > 0 ? (
+          {selectedCafes && selectedCafes.length > 0 ? (
             <>
               <thead>
                 <tr>
@@ -90,7 +130,7 @@ function CityCafesTable({ city }: Props) {
                 </tr>
               </thead>
               <tbody>
-                {cafes.map((cafe: Cafe, index: number) => (
+                {selectedCafes.map((cafe: Cafe, index: number) => (
                   <tr
                     key={cafe.name + index}
                     className="border border-gray-300"
@@ -144,9 +184,7 @@ function CityCafesTable({ city }: Props) {
           ) : (
             <tbody>
               <tr>
-                <td
-                  className="p-4 text-center border border-gray-300"
-                >
+                <td className="p-4 text-center border border-gray-300">
                   لا توجد معلومات متاحة حاليًا، يرجى التواصل لاحقًا
                 </td>
               </tr>
