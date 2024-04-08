@@ -73,7 +73,7 @@ export default function Cities() {
                   </SheetTrigger>
                   {selectedCity === city.name_arabic && (
                     <SheetContent
-                      className="w-full rounded-t-[2rem] min-h-[40rem] bg-[#f6f4ee] text-[#010101] border-none"
+                      className="w-full rounded-t-[2rem] md:min-h-[30rem] bg-[#f6f4ee] text-[#010101] border-none"
                       side={"bottom"}
                     >
                       <Table_cn city={city.name_arabic} />

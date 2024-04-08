@@ -43,6 +43,11 @@ const options = [
   },
 ] as const;
 
+let ratings: number[] = [];
+for (let i = 1; i <= 10; i++) {
+  ratings.push(i);
+}
+
 export default function Header() {
   const supabase = createClient(
     import.meta.env.VITE_SUPABASE_URL,
@@ -60,6 +65,13 @@ export default function Header() {
     setFormData((prevData) => ({
       ...prevData,
       selectedOption: value,
+    }));
+  };
+
+  const handleRatingChange = (value: any) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      rating: value,
     }));
   };
 
@@ -203,16 +215,25 @@ export default function Header() {
               value={formData.location}
               onChange={handleChange}
             />
-            <input
-              type="text"
-              className="bg-transparent border px-5 w-[20rem] rounded-lg h-[4rem]"
-              placeholder="شنهوا تقييم ديلك للمقهى / ١٠"
-              name="rating"
-              value={formData.rating}
-              onChange={handleChange}
-            />
+            <Select dir="rtl" onValueChange={handleRatingChange}>
+              <SelectTrigger className="bg-transparent border px-5 w-[20rem] rounded-lg h-[4rem] text-opacity-30">
+                <SelectValue placeholder="شنهوا تقييم ديلك للمقهى / ١٠" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  {ratings.map((item, index) => (
+                    <SelectItem
+                      key={index}
+                      className="px-5 w-[20rem] h-[4rem] text-opacity-30"
+                      value={item.toString()}
+                    >
+                      {item}
+                    </SelectItem>
+                  ))}
+                </SelectGroup>
+              </SelectContent>
+            </Select>
           </div>
-          {/* FormMessage component goes here */}
         </div>
         <button
           type="submit"

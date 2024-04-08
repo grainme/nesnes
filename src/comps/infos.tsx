@@ -16,34 +16,25 @@ export default function Infos() {
       </div>
       <div className="flex md:flex-row flex-col w-full max-h-[20rem] justify-between items-center px-[15rem] mt-11">
         <div className="flex flex-col md:gap-9 md:w-2/3 w-[100vw] md:text-[19px] md:pl-[8rem] font-ibm font-light">
-          <div className="flex flex-col gap-9 w-full justify-center items-center">
-            <div className="flex md:flex-row flex-col gap-9 w-[80%] justify-center items-center">
-              <div className="flex flex-col gap-5 md:w-[13rem]">
-                <div className="flex flex-row gap-3 items-center underline">
-                  <span className="bg-[#dcaf26] min-h-[12px] min-w-[12px] rounded-full md:inline-block hidden unde"></span>
-                  مواقع المقاهي
-                </div>
-                <div className="md:text-[17px] text-[12px] text-[#ffffffac]">
-                  نصنص يساعدك في العثور على أفضل المقاهي للعمل والدراسة في
-                  المغرب.
-                </div>
+          <div className="flex md:flex-row flex-col gap-9 w-[80%] justify-center items-center pr-[2rem]">
+            <div className="flex flex-col gap-5 md:w-[13rem]">
+              <div className="flex flex-row gap-3 items-center underline">
+                <span className="bg-[#dcaf26] min-h-[12px] min-w-[12px] rounded-full md:inline-block hidden unde"></span>
+                مواقع المقاهي
               </div>
-              <div className="flex flex-col gap-5 md:w-[13rem]">
-                <div className="flex flex-row gap-3 items-center underline">
-                  <span className="bg-[#dcaf26] min-h-[12px] min-w-[12px] rounded-full md:inline-block hidden"></span>
-                  ميزات التطبيق
-                </div>{" "}
-                <div className="md:text-[17px] text-[#ffffffac] text-center">
-                  يوفر نصنص قائمة بالمقاهي التي توفر بيئة ملائمة للعمل على
-                  اللابتوب.
-                </div>
+              <div className="md:text-[17px] text-[12px] text-[#ffffffac]">
+                نصنص يساعدك في العثور على أفضل المقاهي للعمل والدراسة في المغرب.
               </div>
             </div>
-            <div className="md:w-[34rem] md:text-[18px] md:flex hidden text-center text-[13px] px-9">
-              تتمحور ميزة نصنص الرئيسية في توفير قائمة بالمقاهي التي توفر بيئة
-              مريحة ومناسبة للعمل والدراسة. يتم تحديث المقاهي بانتظام لضمان
-              توفير أحدث البيانات للمستخدمين. سنقدم لك تجربة بحث سهلة ومريحة حيث
-              يمكنك العثور بسهولة على المقاهي التي تلبي احتياجاتك.
+            <div className="flex flex-col gap-5 md:w-[13rem]">
+              <div className="flex flex-row gap-3 items-center underline">
+                <span className="bg-[#dcaf26] min-h-[12px] min-w-[12px] rounded-full md:inline-block hidden"></span>
+                ميزات التطبيق
+              </div>{" "}
+              <div className="md:text-[17px] text-[12px] text-[#ffffffac]">
+                يوفر نصنص قائمة بالمقاهي التي توفر بيئة ملائمة للعمل على
+                اللابتوب.
+              </div>
             </div>
           </div>
         </div>
