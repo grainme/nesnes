@@ -12,7 +12,8 @@ import {
   useEffect,
   useState,
 } from "react";
-import { createClient } from "@supabase/supabase-js";
+import { supabase } from "@/config/Client";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface Cafe {
   name: string;
@@ -34,11 +35,6 @@ interface Props {
 }
 
 function CityCafesTable({ city }: Props) {
-  const supabase = createClient(
-    import.meta.env.VITE_SUPABASE_URL,
-    import.meta.env.VITE_SUPABASE_ANON_KEY
-  );
-
   const [cities, setCities] = useState<any[]>([]);
   const [Cafes, setCafes] = useState<any[]>([]);
 
@@ -55,6 +51,7 @@ function CityCafesTable({ city }: Props) {
       setCities(data);
     }
   }
+  
   async function getCafes() {
     const { data, error } = await supabase.from("cafes").select();
     if (error) {
@@ -63,10 +60,15 @@ function CityCafesTable({ city }: Props) {
       setCafes(data);
     }
   }
+
   const selectedCity = cities.find((item) => item.name_arabic === city);
 
   if (!selectedCity) {
-    return <div>City not found</div>;
+    return (
+      <div className="flex flex-col gap-6 justify-center items-center m">
+        <Skeleton className="md:h-[125px] md:w-[250px]  h-[20px] w-[100px] rounded-xl" />
+      </div>
+    );
   }
 
   let selectedCafes = [];

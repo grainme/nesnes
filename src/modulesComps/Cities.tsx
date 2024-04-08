@@ -1,19 +1,14 @@
-import Footer from "@/comps/footer";
-import Project from "../comps/slider";
-import Menu from "./menu";
+import Footer from "@/custom/Footer";
+import Project from "@/custom/Slider/index";
+import Menu from "./Menu";
 import { useEffect, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import Table_cn from "./table";
-import styles from "../comps/slider/style.module.css";
-import { createClient } from "@supabase/supabase-js";
+import Table_cn from "./Table";
+import styles from "@/custom/Slider/style.module.css";
 import { Skeleton } from "@/components/ui/skeleton.js";
+import { supabase } from "@/config/Client";
 
 export default function Cities() {
-  const supabase = createClient(
-    import.meta.env.VITE_SUPABASE_URL,
-    import.meta.env.VITE_SUPABASE_ANON_KEY
-  );
-
   const [cities, setCities] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCity, setSelectedCity] = useState(null);
@@ -37,7 +32,7 @@ export default function Cities() {
   }
 
   return (
-    <div className="flex flex-col min-h-[100vh] font-ibm gap-[7rem] justify-between bg-[#f6f4ee] text-[#010101]">
+    <div className="flex flex-col min-h-[100vh] font-ibm gap-[7rem] justify-between bg-[#f6f4ee] text-[#010101] overflow-hidden">
       <Menu />
       <main className="md:px-[15rem] px-[2rem] md:min-h-[30rem]">
         <div className={styles.gallery}>

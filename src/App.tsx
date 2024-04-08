@@ -1,27 +1,13 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Header from "./comps/header";
-import Cities from "./parts_of_comps/cities";
+import Header from "./custom/Header";
+import Cities from "./modulesComps/Cities";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="bg-[#010101] text-[#f6f4ee] min-h-[100vh] overflow-hidden">
-              <Header />
-            </div>
-          }
-        />
-        <Route
-          path="/cities"
-          element={
-            <div className="bg-[#010101] text-[#f6f4ee] min-h-[100vh] overflow-hidden">
-              <Cities />
-            </div>
-          }
-        />
+        <Route path="/" element={<Header />} />
+        <Route path="/cities" element={<Cities />} />
       </Routes>
     </Router>
   );
