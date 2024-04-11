@@ -8,7 +8,9 @@ export default function Menu() {
       </Link>
       <div className="cursor-pointer flex flex-row md:gap-2 md:px-4 px-3 md:py-[.5rem] py-[.4rem] items-center justify-center font-normal bg-[#f6f4ee] text-[#010101] rounded-md">
         <Link to="/cities">
-          <div className="font-cooper md:text-[14px] text-[10px]">قائمة المدن </div>
+          <div className="font-cooper md:text-[14px] text-[10px]">
+            قائمة المدن{" "}
+          </div>
         </Link>
       </div>
     </div>

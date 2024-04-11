@@ -51,7 +51,7 @@ function CityCafesTable({ city }: Props) {
       setCities(data);
     }
   }
-  
+
   async function getCafes() {
     const { data, error } = await supabase.from("cafes").select();
     if (error) {
@@ -140,12 +140,10 @@ function CityCafesTable({ city }: Props) {
                     <td className="p-4 font-medium text-center border border-gray-300">
                       {cafe.name}
                     </td>
-                    <td className="p-4 max-w-[5rem] border border-gray-300">
+                    <td className="p-4 min-w-[5rem] border border-gray-300">
                       <div className="flex md:flex-row flex-col gap-2 items-center justify-center">
                         {cafe.categories.map((category: string, i: number) => {
-                          const randomColorIndex = Math.floor(
-                            Math.random() * categoryColors.length
-                          );
+                          const randomColorIndex = i % 5;
                           const randomColor = categoryColors[randomColorIndex];
                           const textColor = textColors[randomColorIndex];
                           return (
